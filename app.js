@@ -147,7 +147,7 @@ app.get('/tennis',function(req,res){
 
 async function database(){
   var {MongoClient} = require('mongodb');
-  var mongourl = "mongodb://mystore:mystore@cluster0-shard-00-00.f7uq6.mongodb.net:27017,cluster0-shard-00-01.f7uq6.mongodb.net:27017,cluster0-shard-00-02.f7uq6.mongodb.net:27017/MyStoreDB?ssl=true&replicaSet=atlas-8oz8fi-shard-0&authSource=admin&retryWrites=true&w=majority"
+  //var mongourl = removed it for users safety :)
   var client = new MongoClient(mongourl,{useNewUrlParser: true, useUnifiedTopology: true});
   await client.connect();
   // await client.db('MyStoreDB').createCollection('USERS');
